@@ -7,14 +7,13 @@ const styles = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-
         padding: 10,
     },
 };
 
 const Footer = () => (
     <footer style={styles.footer}>
-        <p>PhoneBook &copy; 2022 by </p>{' '}
+        <p>PhoneBook &copy; 2022 by</p>{' '}
         <a
         href="https://github.com/TatianaSierkova"
         target="_blank"

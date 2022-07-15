@@ -1,7 +1,7 @@
 import { filterContact } from '../../redux/filter/actions';
 import { useDispatch } from 'react-redux';
-import { FilterInput, FilterWrapper } from './FilterStyle';
-import { LabelForm } from '../ContactForm/ContactFormStyle';
+import { FilterInput, FilterWrapper } from './Filter.styled';
+import { LabelForm } from '../ContactForm/ContactForm.styled';
 import propTypes from 'prop-types';
 
 export const Filter = () => {

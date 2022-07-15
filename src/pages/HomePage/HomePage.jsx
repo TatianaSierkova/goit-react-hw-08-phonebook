@@ -13,25 +13,19 @@ const styles = {
     },
     title: {
         fontWeight: 500,
-        fontSize: 36,
+        fontSize: 30,
         textAlign: 'center',
     },
     text: {
-        fontSize: 20,
+        fontSize: 17,
         textAlign: 'center',
-    },
-    link: {
-        fontWeight: 500,
-        fontSize: 24,
-        textAlign: 'center',
-        borderBottom: '1px solid #000000',
     },
 };
 
 const HomePage = () => (
     <div style={styles.container}>
-        <h1 style={styles.title}>PhoneBook☎️servise</h1>
-        <span style={styles.text}>SignIn</span>
+        <h1 style={styles.title}>Welcome to the PhoneBook☎️</h1>
+        <span style={styles.text}>where you can store and manage your contacts</span>
     </div>
 );
 

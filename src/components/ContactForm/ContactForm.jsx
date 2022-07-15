@@ -3,7 +3,7 @@ import * as yup from 'yup';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Button } from '../Buttons/Button';
-import { AddForm, Input, Message, LabelForm } from './ContactFormStyle';
+import { AddForm, Input, Message, LabelForm } from './ContactForm.styled';
 import {
   useFetchContactsQuery,
   useAddContactsMutation,

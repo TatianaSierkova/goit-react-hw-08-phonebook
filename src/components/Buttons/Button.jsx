@@ -1,4 +1,4 @@
-import { AddButton } from './ButtonStyle';
+import { AddButton } from './Button.styled';
 import propTypes from 'prop-types';
 export const Button = ({ type, onClick, children }) => {
     return (

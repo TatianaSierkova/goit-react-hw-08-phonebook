@@ -1,6 +1,6 @@
 import React from "react";
 import propTypes from "prop-types";
-import { DelButton } from "./ButtonStyle";
+import { DelButton } from "./Button.styled";
 
 export const IconButton = ({ children, onClick, ...allyProps }) => {
 	return (

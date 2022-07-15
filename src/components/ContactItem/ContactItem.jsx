@@ -1,4 +1,4 @@
-import { Item, Name, PhoneNumber } from './ContactItemStyle';
+import { Item, Name, PhoneNumber } from './ContactItem.styled';
 import { ReactComponent as DeleteIcon } from '../../Icon/delicon.svg';
 import { IconButton } from '../Buttons/IconButton';
 import { useRemoveContactsMutation } from 'redux/api/contactsApi';

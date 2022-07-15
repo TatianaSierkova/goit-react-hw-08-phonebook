@@ -4,7 +4,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { authSelectors } from 'redux/auth';
 import { authOperations } from 'redux/auth';
-import { Container } from './AppStyle';
+import { Container } from './App.styled';
 import { SpinnerInfinity } from 'spinners-react';
 import AppBar from './AppBar/AppBar';
 import Footer from './Footer/Footer';

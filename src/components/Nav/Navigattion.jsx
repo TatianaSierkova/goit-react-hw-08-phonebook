@@ -7,7 +7,8 @@ const styles = {
     display: 'inline-block',
     textDecoration: 'none',
     fontWeight: 700,
-    color: '#290249',
+    color: '#fff',
+    textShadow: '1px 1px 10px blue, 1px 1px 5px black, 1px 1px 7px yellow'
 };
 
 let activeStyle = {
@@ -26,7 +27,7 @@ const Navigation = () => {
             exact="true"
             style={({ isActive }) => (isActive ? activeStyle : styles)}
             >
-            Главная
+            Home
             </NavLink>
         ) : (
             <NavLink
