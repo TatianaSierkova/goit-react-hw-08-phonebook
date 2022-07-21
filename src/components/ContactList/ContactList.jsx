@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import { List, Total } from './ContactList.styled';
 import { useSelector } from 'react-redux';
@@ -41,14 +40,4 @@ export const ContactList = () => {
       </List>
     </>
   );
-};
-
-ContactList.propTypes = {
-  contacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    })
-  ),
 };

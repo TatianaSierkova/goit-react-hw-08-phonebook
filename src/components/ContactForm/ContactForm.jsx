@@ -8,7 +8,6 @@ import {
   useFetchContactsQuery,
   useAddContactsMutation,
 } from 'redux/api/contactsApi';
-import propTypes from 'prop-types';
 import { SpinnerInfinity } from 'spinners-react';
 
 const phoneRegExp =
@@ -39,13 +38,14 @@ const FormError = ({ name }) => {
 export const ContactForm = () => {
   const { data: contacts } = useFetchContactsQuery();
   const [newContact, { isLoading }] = useAddContactsMutation();
+  
   const handleSubmit = ({ name, number }, { resetForm }) => {
     const nameInContacts = contacts.find(
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
     if (nameInContacts) {
       toast.warn(`${name} is already in contacts`);
-      resetForm();
+      //resetForm();
       return;
     }
     newContact({ name, number });
@@ -94,9 +94,4 @@ export const ContactForm = () => {
       </Formik>
     </>
   );
-};
-
-ContactForm.propTypes = {
-  onSubmit: propTypes.func.isRequired,
-  contacts: propTypes.arrayOf(propTypes.object),
 };
