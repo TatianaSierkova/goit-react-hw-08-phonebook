@@ -45,11 +45,10 @@ export const ContactForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const data = { id: nanoid(), ...form };
-    if (
-      contacts.find(
+    const nameInContacts = contacts.find(
       contact => contact.name.toLowerCase() === data.name.toLowerCase()
-      )
-    ) {
+    );
+    if (nameInContacts) {
       toast.warn(`${data.name} is already in contacts`);
       resetForm();
       return;
