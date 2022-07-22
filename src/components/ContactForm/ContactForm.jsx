@@ -51,7 +51,7 @@ export const ContactForm = () => {
       )
     ) {
       toast.warn(`${data.name} is already in contacts`);
-      resetForm();
+      //resetForm();
       return;
     }
     newContact(data);
