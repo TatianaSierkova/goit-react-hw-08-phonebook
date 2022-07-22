@@ -41,7 +41,7 @@ export const ContactForm = () => {
   const { data: contacts } = useFetchContactsQuery();
   const [newContact, { isLoading, isSuccess }] = useAddContactsMutation();
 
-  const handleSubmit = ({ name, number }, {resetForm}) => {
+  const handleSubmit = ({ name, number }, { resetForm }) => {
     const nameInContacts = contacts.find(
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
@@ -50,7 +50,7 @@ export const ContactForm = () => {
       resetForm();
       return;
     }
-    newContact(name, number );
+    newContact({ name, number });
   };
 
   useEffect(() => {
