@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Formik, ErrorMessage } from 'formik';
-import { nanoid } from 'nanoid';
+//import { nanoid } from 'nanoid';
 import * as yup from 'yup';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -38,32 +38,25 @@ const FormError = ({ name }) => {
 };
 
 export const ContactForm = () => {
-  const [form, setForm] = useState({ name: '', number: '' });
   const { data: contacts } = useFetchContactsQuery();
   const [newContact, { isLoading, isSuccess }] = useAddContactsMutation();
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    const data = { id: nanoid(), ...form };
+  const handleSubmit = ({ name, number }, {resetForm}) => {
     const nameInContacts = contacts.find(
-      contact => contact.name.toLowerCase() === data.name.toLowerCase()
+      contact => contact.name.toLowerCase() === name.toLowerCase()
     );
     if (nameInContacts) {
-      toast.warn(`${data.name} is already in contacts`);
+      toast.warn(`${name} is already in contacts`);
       resetForm();
       return;
     }
-    newContact(data);
-  };
-
-  const resetForm = () => {
-    setForm({ name: '', number: '' });
+    newContact(name, number );
   };
 
   useEffect(() => {
     if (isSuccess) {
       toast.success(`Added to the phonebook `);
-      resetForm();
+      //resetForm();
     }
   }, [isSuccess]);
   
