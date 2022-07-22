@@ -5,7 +5,7 @@ import {
     widthHeight,
     deviceMin,
     deviceMax,
-} from '../mainstyle/mixins';
+} from './mainstyle/mixins';
 
 export const Container = styled.div`
     padding: 40px 30px;
