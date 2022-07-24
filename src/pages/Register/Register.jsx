@@ -32,9 +32,9 @@ const Register = () => {
 
     const handleSubmit = e => {
         dispatch(authOperations.register({ name, email, password }));
-        setName('');
+        /*setName('');
         setEmail('');
-        setPassword('');
+        setPassword('');*/
     };
 
     return (

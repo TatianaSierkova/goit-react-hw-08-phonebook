@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { Formik, ErrorMessage } from 'formik';
-//import { nanoid } from 'nanoid';
 import * as yup from 'yup';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -56,7 +55,6 @@ export const ContactForm = () => {
   useEffect(() => {
     if (isSuccess) {
       toast.success(`Added to the phonebook `);
-      //resetForm();
     }
   }, [isSuccess]);
   

@@ -29,8 +29,8 @@ const Login = () => {
 
     const handleSubmit = () => {
         dispatch(authOperations.logIn({ email, password }));
-        setEmail('');
-        setPassword('');
+        /*setEmail('');
+        setPassword('');*/
     };
 
     return (
